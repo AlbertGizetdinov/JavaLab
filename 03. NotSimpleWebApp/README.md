@@ -1,1 +1,1 @@
-[Ссылка на видео-демонстрацию работоспособности приложения](https://www.youtube.com/watch?v=-B1oJscSNgw)
+[Ссылка на видео-демонстрацию работоспособности приложения](https://www.youtube.com/watch?v=BgYjBvDAzLU)
