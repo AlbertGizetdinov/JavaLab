@@ -15,6 +15,9 @@
     <label for="last_name">Enter your last name:</label>
     <input id="last_name" name="lastName" placeholder="Last Name">
     <br>
+    <label for="email">Enter your email:</label>
+    <input id="email" name="email" placeholder="Email">
+    <br>
     <input type="submit" value="Send">
 </form>
 <h1>Accounts Page</h1>

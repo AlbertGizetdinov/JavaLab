@@ -28,6 +28,7 @@ public class AccountsController {
         Account account = Account.builder()
                 .firstName(accountDto.getFirstName())
                 .lastName(accountDto.getLastName())
+                .email(accountDto.getEmail())
                 .build();
         accountsService.addAccount(account);
         return "redirect:/accounts";

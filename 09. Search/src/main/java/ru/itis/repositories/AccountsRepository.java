@@ -5,10 +5,6 @@ import ru.itis.models.Account;
 
 import java.util.List;
 
-public interface AccountsRepository {
-    List<Account> findAll();
-
-    void save(Account account);
-
+public interface AccountsRepository extends CrudRepository<Account>{
     List<AccountDto> searchByEmail(String email);
 }
