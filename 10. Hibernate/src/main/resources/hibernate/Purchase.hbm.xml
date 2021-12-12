@@ -1,0 +1,28 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ru.itis.models.Purchase">
+        <id name="id" type="java.lang.Long">
+            <generator class="identity"/>
+        </id>
+
+        <property name="name"/>
+        <property name="price"/>
+
+        <many-to-one name="customer" class="ru.itis.models.Customer">
+            <column name="customer_id"/>
+        </many-to-one>
+
+
+        <bag name="products" table="product_purchase" inverse="true">
+            <key>
+                <column name="purchase_id" not-null="true"/>
+            </key>
+            <many-to-many entity-name="ru.itis.models.Product">
+                <column name="product_id" not-null="true"/>
+            </many-to-many>
+        </bag>
+    </class>
+</hibernate-mapping>

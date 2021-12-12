@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ru.itis.models.Manufacturer">
+        <id name="id" type="java.lang.Long">
+            <generator class="identity"/>
+        </id>
+
+        <property name="name"/>
+        <property name="description"/>
+
+        <bag name="products">
+            <key>
+                <column name="manufacturer_id"/>
+            </key>
+            <one-to-many class="ru.itis.models.Product"/>
+        </bag>
+    </class>
+</hibernate-mapping>
