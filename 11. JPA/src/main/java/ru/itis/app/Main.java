@@ -17,7 +17,7 @@ public class Main {
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         EntityManager entityManager = sessionFactory.createEntityManager();
         PurchaseRepositoryJpaImpl purchaseRepositoryJpa = new PurchaseRepositoryJpaImpl(entityManager);
-//        System.out.println(purchaseRepositoryJpa.findAllByProduct_name("Adrenaline Rush"));
+        System.out.println(purchaseRepositoryJpa.findAllByProduct_name("Adrenaline Rush"));
 
         purchaseRepositoryJpa.save(Purchase.builder()
                 .name("Покупка 5")
