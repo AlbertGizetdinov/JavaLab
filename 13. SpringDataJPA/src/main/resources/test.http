@@ -1,0 +1,20 @@
+POST /add/product
+host:localhost
+Content-Type: application/json
+
+{
+  "name": "RedBull",
+  "price": 169.99
+}
+
+###
+
+GET localhost/product/4
+
+###
+
+GET localhost/customer/Albert
+
+###
+
+GET localhost/customers
