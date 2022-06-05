@@ -1,0 +1,93 @@
+### Получение списка авторов
+
+GET localhost/api/authors?page=2
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkNPTkZJUk1FRCIsImV4cCI6MTY1NDQ0OTExMCwiZW1haWwiOiJhbGJlcnRAZ21haWwuY29tIn0.DQSdq4hQnkWVcFZxIzEB73AJpoCqpun_UJnYF7NTHqM
+
+### Добавление автора
+
+POST localhost/api/authors
+Content-Type: application/json
+
+{
+  "firstName": "asd",
+  "lastName": "123"
+}
+
+### Обновление автора
+
+PUT localhost/api/authors/21
+Content-Type: application/json
+
+{
+  "firstName": "Александр",
+  "lastName": "Пушкин"
+}
+
+### Удаление автора
+
+DELETE localhost/api/authors/4
+
+### Получение списка псотов
+
+GET localhost/api/posts/?page=0
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IlVTRVIiLCJzdGF0ZSI6IkNPTkZJUk1FRCIsImV4cCI6MTY1NDQ0OTExMCwiZW1haWwiOiJhbGJlcnRAZ21haWwuY29tIn0.DQSdq4hQnkWVcFZxIzEB73AJpoCqpun_UJnYF7NTHqM
+
+### Получение списка псотов определенного автора
+
+GET localhost/api/posts/5?page=0
+
+### Добавление поста
+
+POST localhost/api/posts
+Content-Type: application/json
+
+{
+  "title": "12345",
+  "text":  "67890",
+  "state": "DRAFT",
+  "authorId": 5
+}
+
+### Обновление поста
+
+PUT localhost/api/posts/21
+Content-Type: application/json
+
+{
+  "title": "Обновленный пост",
+  "text":  "Обновленный текст",
+  "state": "DRAFT",
+  "authorId": 5
+}
+
+### Удаление поста
+
+DELETE localhost/api/posts/21
+
+### Добавление поста в избанное
+
+POST localhost/api/authors/1/favorites
+Content-Type: application/json
+
+{
+  "postId": 7
+}
+
+### Удаление поста из избранного
+
+DELETE localhost/api/authors/1/favorites/6
+
+### Получение токена
+
+POST localhost/login
+Content-Type: application/json
+
+{
+  "email": "albert@gmail.com",
+  "password": "qwerty007"
+}
+
+### Logout
+
+GET localhost/logout
+Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwicm9sZSI6IkFETUlOIiwic3RhdGUiOiJDT05GSVJNRUQiLCJleHAiOjE2NTQ0NDkwNDEsImVtYWlsIjoiYWxiZXJ0QGdtYWlsLmNvbSJ9.DqwDzN6A8P3zuElXIlfgvaxaRjpWEZH_y2esnKdyc2M
