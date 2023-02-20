@@ -1,0 +1,78 @@
+### Получение списка авторов
+
+GET localhost/authors?page=2
+
+### Добавление автора
+
+POST localhost/authors
+Content-Type: application/json
+
+{
+  "firstName": "12",
+  "lastName": "123"
+}
+
+### Обновление автора
+
+PUT localhost/authors/21
+Content-Type: application/json
+
+{
+  "firstName": "Александр",
+  "lastName": "Пушкин"
+}
+
+### Удаление автора
+
+DELETE localhost/authors/4
+
+### Получение списка псотов
+
+GET localhost/posts/?page=0
+
+### Получение списка псотов определенного автора
+
+GET localhost/posts/5?page=0
+
+### Добавление поста
+
+POST localhost/posts
+Content-Type: application/json
+
+{
+  "title": "12345",
+  "text":  "67890",
+  "state": "DRAFT",
+  "authorId": 5
+}
+
+### Обновление поста
+
+PUT localhost/posts/21
+Content-Type: application/json
+
+{
+  "title": "Обновленный пост",
+  "text":  "Обновленный текст",
+  "state": "DRAFT",
+  "authorId": 5
+}
+
+### Удаление поста
+
+DELETE localhost/posts/21
+
+### Добавление поста в избанное
+
+POST localhost/authors/1/favorites
+Content-Type: application/json
+
+{
+  "postId": 7
+}
+
+### Удаление поста из избранного
+
+DELETE localhost/authors/1/favorites/6
+
+
